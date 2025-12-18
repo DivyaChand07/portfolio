@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #222;
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar .logo {
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .home {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: #fff;
+      text-align: center;
+    }
+
+    .home span {
+      color: #ffeb3b;
+    }
+
+    .home button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      background: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .skill-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px auto;
+      width: 70%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+      
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffeb3b;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .project-card {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .home h1 {
+        font-size: 24px;
+      }
+
+      .home p {
+        font-size: 14px;
+      }
+    }
+      
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #fff;
+      background: #333;
+      padding: 10px 15px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #222;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">MyPortfolio</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home">
+    <h1>Hello, I'm <span>DIVYA CHAND</span></h1>
+    <p>BCA Graduate | Frontend Developer</p>
+    <button onclick="scrollToSection('contact')">Hire Me</button>
+    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a BCA graduate with a strong interest in web development. I enjoy
+      creating clean, responsive, and user-friendly websites using HTML, CSS,
+      and JavaScript.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skill-list">
+      <div class="skill">HTML5</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript (ES6)</div>
+<div class="skill">Java</div>
+<div class="skill">Responsive Web Design</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">VS Code</div>
+<div class="skill">MongoDB (Basics)</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Teamwork & Communication</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+<section id="projects">
+<h2>Projects</h2>
+
+
+<div class="project-card">
+<h3>DINE-8 Restaurant Website</h3>
+<p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+<p>
+A creative and responsive restaurant website inspired by One8 Commune.
+Implemented smooth scrolling, image sliders, and interactive navigation
+using JavaScript. Focused on elegant UI design, custom CSS animations,
+and mobile-friendly responsive layouts.
+</p>
+</div>
+
+
+<div class="project-card">
+<h3>Password Validator</h3>
+<p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+<p>
+Interactive web application for validating password strength.
+Implemented validation logic using regular expressions to check
+uppercase, lowercase, numeric, and special characters with real-time
+feedback. Designed a clean and responsive user interface to enhance
+usability and security awareness.
+</p>
+</div>
+<div class="project-card">
+<h3>Food Ordering Website</h3>
+<p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+<p>
+Responsive multi-page food ordering web application with menu browsing,
+cart, and checkout sections. Implemented add-to-cart and order summary
+functionality using JavaScript. Designed an attractive, mobile-friendly
+layout with smooth navigation for better user experience.
+</p>
+</div>
+</section>
+<!-- Certifications -->
+<section id="certifications">
+<h2>Certifications</h2>
+
+
+<div class="project-card">
+<h3>Frontend Developer Internship Training Certificate</h3>
+<p><strong>Organization:</strong> 4Achievers, Dehradun</p>
+<p><strong>Duration:</strong> Aug 2024 – Nov 2024</p>
+<p>
+Successfully completed frontend development internship focusing on
+HTML, CSS, and JavaScript. Gained hands-on experience in building
+responsive user interfaces, improving UI/UX elements, and working on
+real-world web development projects under mentor guidance.
+</p>
+</div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return submitForm()">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="msg"></p>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/divya-chand07/" target="_blank">in</a>
+      <a href="https://github.com/DivyaChand07" target="_blank">GH</a>
+    </div>
+    <p>© 2025 Divya Chand | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function submitForm() {
+      document.getElementById('msg').innerText = 'Message sent successfully!';
+      return false;
+    }
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
